@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" scale="1.0" />
+    <title>@ViewData["Title"] - AddressBook</title>
+    <link type="text/css" rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+    <link type="text/css" rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link type="text/css" rel="stylesheet" href="~/css/userDetailsForm.css" asp-append-version="true" />
+</head>
+<body class="page-container">
+    <header>
+        <h1 class="page-title">Address Book</h1>
+        <nav class="nav-bar">
+            <div class="nav-menu">
+                <ul class="nav-items">
+                    <li><a asp-controller="home" asp-action="index">home</a></li>
+                    <li><a id="nav-add-btn" asp-controller="contact" asp-action="displaycontactform">+add</a></li>
+                </ul>
+            </div>
+            <div class="blog-icon">
+                <img src="~/images/blog-icon.png" alt="blog-icon" />
+            </div>
+        </nav>
+    </header>
+    <section class="page-content">
+        <h2 class="contact-heading">Contacts</h2>
+        <div class="person-contact-details">
+            @RenderBody()
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+ </body>
+</html>

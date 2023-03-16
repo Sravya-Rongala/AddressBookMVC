@@ -1,0 +1,22 @@
+﻿@model ContactModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@await Html.PartialAsync("_ContactDetailsPartial")
+
+@{
+    if (Model!= null)
+    {
+        <div class="person-bio-data">
+            <span id="person-bio-name">@Model.Name</span>
+            <span id="person-bio-email">Email: @Model.Email</span>
+            <span id="person-bio-mobile">Mobile: @Model.Mobile</span>
+            <span id="person-bio-landline">Landline: @Model.Landline</span>
+            <span id="person-bio-website">Website: @Model.Website</span>
+            <span id="person-bio-address">Address: @Model.Address</span>
+        </div>
+        <div class="edit-icon"><a asp-controller="contact" asp-action="updatecontactform" asp-route-id=@Model.Id><img src="~/images/edit1.jpg">Edit</a></div>
+        <div class="delete-icon"><a asp-controller="contact" asp-action="deletecontact" asp-route-id=@Model.Id><img src="~/images/delete1.png">Delete</a></div>
+    }
+}

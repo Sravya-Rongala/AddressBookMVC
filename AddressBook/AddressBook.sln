@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressBook", "AddressBook.csproj", "{24EC4421-07C5-433D-8BB5-BE33CE105E89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBookMVC.Domain", "..\AddressBook.Domain\AddressBookMVC.Domain.csproj", "{6085F7BF-402E-4B68-89C1-BF42BD25695C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Services", "..\AddressBook.Services\AddressBook.Services.csproj", "{86752ADA-D694-41C6-BC15-58812777F351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Infrastructure", "..\AddressBook.Infrastructure\AddressBook.Infrastructure.csproj", "{1C16E243-0434-406A-8E6F-9FBAEE17A39A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24EC4421-07C5-433D-8BB5-BE33CE105E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EC4421-07C5-433D-8BB5-BE33CE105E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EC4421-07C5-433D-8BB5-BE33CE105E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EC4421-07C5-433D-8BB5-BE33CE105E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6085F7BF-402E-4B68-89C1-BF42BD25695C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6085F7BF-402E-4B68-89C1-BF42BD25695C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6085F7BF-402E-4B68-89C1-BF42BD25695C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6085F7BF-402E-4B68-89C1-BF42BD25695C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86752ADA-D694-41C6-BC15-58812777F351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86752ADA-D694-41C6-BC15-58812777F351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86752ADA-D694-41C6-BC15-58812777F351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86752ADA-D694-41C6-BC15-58812777F351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C16E243-0434-406A-8E6F-9FBAEE17A39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C16E243-0434-406A-8E6F-9FBAEE17A39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C16E243-0434-406A-8E6F-9FBAEE17A39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C16E243-0434-406A-8E6F-9FBAEE17A39A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {702CB240-2511-47C5-9CD8-EC58B9289C5D}
+	EndGlobalSection
+EndGlobal

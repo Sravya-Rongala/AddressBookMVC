@@ -1,0 +1,60 @@
+﻿@model ContactModel
+@{
+    if (@Model!= null && @Model.Id!=0)
+    {
+        ViewData["Title"] = "Update Details";
+    }
+    else
+    {
+        ViewData["Title"] = "Add Details";
+    }
+    var FormButton = "Add";  
+}
+@await Html.PartialAsync("_ContactDetailsPartial")
+
+<div class="add-details-section" id="user-form">
+    <form class="details-form" method="post" id="user-details-form" asp-action="contactformoperations" asp-controller="contact">
+        @if (@Model!= null && @Model.Id!=0)
+        {
+            FormButton = "Update";
+            @Html.TextBoxFor(m => m.Id,new {type="hidden"})
+        }
+        else
+        {
+            FormButton = "Add";
+        }
+        <ul class="form-name-section">
+            <li>Name</li>
+            @Html.ValidationMessageFor(m=>m.Name,"",new{@class="mandatory-field"})
+            <li>@Html.TextBoxFor(m => m.Name)</li>
+        </ul>
+        <ul class="form-email-section">
+            <li>Email</li>
+            @Html.ValidationMessageFor(m=>m.Email,"",new{@class="mandatory-field"})
+            <li>@Html.TextBoxFor(m=>m.Email)</li>
+        </ul>
+        <div class="contact-numbers-section">
+            <ul class="form-mobile-section">
+                <li>Mobile</li>
+                @Html.ValidationMessageFor(m=>m.Mobile,"",new{@class="mandatory-field"})
+                <li>@Html.TextBoxFor(m=>m.Mobile)</li>
+            </ul>
+            <ul class="form-landline-section">
+                <li>Landline</li>
+                <li><input type="text" class="form-landline" asp-for="Landline"></li>
+            </ul>
+        </div>
+        <ul class="form-website-section">
+            <li>Website</li>
+            <li><input type=text class="form-website" asp-for="Website"></li>
+        </ul>
+        <ul class="form-address-section">
+            <li>Address</li>
+            <li><textarea class="form-address" asp-for="Address"></textarea></li>
+        </ul>
+        <ul class="form-btn">
+            <li><input type="submit" id="submit-btn" value=@FormButton></li>
+            <li><a asp-controller="Home" asp-action="Index"> <input type="button" id="cancel-btn" value="Cancel"></a></li>
+        </ul>
+    </form>
+</div>

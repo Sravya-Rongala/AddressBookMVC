@@ -1,0 +1,20 @@
+﻿<div class="contact-details" id="contact-details">
+    @{
+        var userDetailsList = ViewData["list"] as IEnumerable<ContactModel>;
+        if (userDetailsList!.Count() == 0)
+        {
+            <p>No Data Found</p>
+        }
+        else
+        {
+            foreach (var user in userDetailsList!)
+            {
+                <div onclick="location.href='/contact/displayContact/@user.Id'" class="person-contact-details-section">
+                    <p>@user.Name</p>
+                    <p>@user.Email</p>
+                    <p>@user.Mobile</p>
+                </div>
+            }
+        }
+    }
+</div>
